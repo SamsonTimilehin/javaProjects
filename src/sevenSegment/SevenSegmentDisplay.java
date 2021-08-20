@@ -14,7 +14,7 @@ public class SevenSegmentDisplay {
 
             }
             System.out.println();
-//            System.out.println();
+            System.out.println();
         }
     }
 
@@ -62,6 +62,7 @@ public class SevenSegmentDisplay {
     }
     public void setLoop(String number){
         number  = convertInputToBinary(number);
+        number = fillUpNumber(number);
         for(int i = 0; i < number.length(); i++){
 
             if(number.length() > 8){
@@ -93,20 +94,21 @@ public class SevenSegmentDisplay {
         }
     }
 
-//    public void validationMethod(String number){
-//        for(int i = 0; i < number.length(); i++){
-//
-//            if(number.length() > 8){
-//                throw new IllegalArgumentException( "oh no Samson!");
-//            }else if(number.charAt(i) > '1') {
-//                throw new IllegalArgumentException("Wrong input Sam!");
-//            }
-//
-//
-//        }
-//    }
+    public String validationMethod(String number){
+        for(int i = 0; i < number.length(); i++){
+
+            if(number.length() > 8){
+                throw new IllegalArgumentException( "oh no Samson!");
+            }else if(number.charAt(i) > '1') {
+                throw new IllegalArgumentException("Wrong input Sam!");
+            }
+
+
+        }
+        return number;
+    }
     public String fillUpNumber(String number){
-        //validationMethod(number);
+        number = validationMethod(number);
         if(number.length() < 8){
             StringBuilder stringBuilder = new StringBuilder();
             int length = 8 - number.length();
@@ -126,7 +128,7 @@ public class SevenSegmentDisplay {
 
         int storeInteger = Integer.parseInt(number);
 
-        String binaryNumber= "";
+        String binaryNumber = "";
         while(storeInteger  > 0) {
 
             int remainder = storeInteger % 2;

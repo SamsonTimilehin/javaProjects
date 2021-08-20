@@ -84,7 +84,6 @@ public class CardDeck {
     }
 
     public Card pop() {
-        //  if(isEmpty()) throw new StackUnderflowException("mywork.Player.Card deck is empty");
         return cards[lastPushedLocation--];
     }
 
