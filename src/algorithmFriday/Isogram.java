@@ -1,13 +1,12 @@
 package algorithmFriday;
 
-import java.util.Locale;
-
 public class Isogram {
 
     public static void main(String[] args) {
 
-        String isString = "thence";
-        boolean result = isIsogram(isString);
+        String isogram = "thencE";
+
+        boolean result = isIsogram(isogram);
         System.out.println(result);
 
     }
@@ -23,7 +22,7 @@ public class Isogram {
 
                 if (stringValue.charAt(i) == stringValue.charAt(j)) {
 
-                    return true;
+                    return false;
                 }
 
 
@@ -32,7 +31,7 @@ public class Isogram {
 
 
 
-        return false;
+        return true;
     }
 }
 
