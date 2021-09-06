@@ -1,8 +1,5 @@
 package algorithmFriday;
 
-
-import java.util.Arrays;
-
 public class ReorderedArray {
 
     public static void main(String[] args) {
