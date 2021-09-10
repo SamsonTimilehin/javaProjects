@@ -1,4 +1,4 @@
-package turtleGraphics;
+package turtle;
 
 public class Position {
 

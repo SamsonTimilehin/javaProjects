@@ -2,9 +2,10 @@ package turtleGraphics;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import turtle.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static turtleGraphics.Direction.*;
+import static turtle.Direction.*;
 
 public class TurtleTest {
     Pen pen;

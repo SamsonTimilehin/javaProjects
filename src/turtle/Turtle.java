@@ -1,6 +1,11 @@
-package turtleGraphics;
+package turtle;
 
-import static turtleGraphics.Direction.*;
+import turtle.Direction;
+import turtle.Pen;
+import turtle.Position;
+import turtle.SketchPad;
+
+import static turtle.Direction.*;
 
 public class Turtle {
     private final Pen pen;

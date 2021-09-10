@@ -1,4 +1,4 @@
-package turtleGraphics;
+package turtle;
 
 public enum Direction {
     EAST, SOUTH, WEST, NORTH;
