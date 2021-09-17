@@ -9,7 +9,10 @@ public class FindOddNumber {
 
     public static void displayOddNumber(int firstNum, int secondNum){
 
-        if(firstNum < secondNum) {
+        if(firstNum < 0 || secondNum < 0){
+            throw new IllegalArgumentException("Any of the number cannot be less than Zero");
+
+        }else if(firstNum < secondNum) {
 
             for (int i = firstNum; i < secondNum; i++) {
 
