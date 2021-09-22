@@ -1,5 +1,7 @@
 package customerInvoice;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ItemTest {
@@ -15,21 +17,33 @@ public class ItemTest {
 
         Scanner scanInteger = new Scanner(System.in);
 
-        System.out.println("Enter product name");
-        String productName = scanString.nextLine();
-        items.setName(productName);
+        Scanner scan = new Scanner(System.in);
+        String decision;
+        List<Item> store = new ArrayList<>();
 
-        System.out.println("Enter product price");
-        double productPrice = scanDouble.nextDouble();
-        items.setPrice(productPrice);
+        do{
+            System.out.println("Enter product name");
+            String productName = scanString.nextLine();
+            items.setName(productName);
 
-        System.out.println("Enter Quantity of product");
-        int unitSold = scanInteger.nextInt();
-        items.setQuantity(unitSold);
+            System.out.println("Enter product price");
+            double productPrice = scanDouble.nextDouble();
+            items.setPrice(productPrice);
 
-        customer.addItems(items);
-        System.out.println(customer.getItemList());
+            System.out.println("Enter Quantity of product");
+            int unitSold = scanInteger.nextInt();
+            items.setQuantity(unitSold);
+
+            customer.addItems(items);
+            store.add(items);
+            System.out.println("Press Yes to continue or No to Exit");
+             decision = scan.nextLine();
+
+        }while (decision.equalsIgnoreCase("yes"));
+
+
+        System.out.println(store);
+
         System.out.println(customer.calculateTotalPrice());
-        System.out.println(items);
     }
 }
