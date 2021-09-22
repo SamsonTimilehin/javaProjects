@@ -1,7 +1,6 @@
 package customerInvoice;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
 
 public class ItemTest {
@@ -9,7 +8,7 @@ public class ItemTest {
     public static void main(String[] args) {
 
         Item items = new Item();
-        Cart customer = new Cart();
+        Cart cart = new Cart();
 
         Scanner scanDouble = new Scanner(System.in);
 
@@ -18,8 +17,9 @@ public class ItemTest {
         Scanner scanInteger = new Scanner(System.in);
 
         Scanner scan = new Scanner(System.in);
+
         String decision;
-        List<Item> store = new ArrayList<>();
+
 
         do{
             System.out.println("Enter product name");
@@ -34,16 +34,16 @@ public class ItemTest {
             int unitSold = scanInteger.nextInt();
             items.setQuantity(unitSold);
 
-            customer.addItems(items);
-            store.add(items);
+            cart.addItems(items);
+
             System.out.println("Press Yes to continue or No to Exit");
              decision = scan.nextLine();
 
         }while (decision.equalsIgnoreCase("yes"));
 
 
-        System.out.println(store);
+        System.out.println(cart.getItemList());
 
-        System.out.println(customer.calculateTotalPrice());
+        System.out.println("Total Purchase: " + cart.calculateTotalPrice());
     }
 }
