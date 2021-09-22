@@ -26,6 +26,7 @@ public class ItemTest {
             String productName = scanString.nextLine();
             items.setName(productName);
 
+
             System.out.println("Enter product price");
             double productPrice = scanDouble.nextDouble();
             items.setPrice(productPrice);
