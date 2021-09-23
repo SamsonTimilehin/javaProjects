@@ -13,7 +13,8 @@ public class Maxlength {
     }
     public static int findMaximumLength(List<String> arr){
         
-        int intValue = 0;
+        int intValue;
+        int highestValue = 0;
         
         List<String> temp = new ArrayList<>();
         
@@ -25,19 +26,13 @@ public class Maxlength {
             }
         }
         System.out.println(temp);
-        for(int k = 0; k < temp.size(); k++){
-            
-            for(int m = k + 1; m < temp.size(); m++){
-                
-                if(temp.get(k).length() < temp.get(m).length()){
-                    intValue = temp.get(m).length();
-                    System.out.println(intValue);
-                }else if(temp.get(m).length() < temp.get(k).length()){
-                    intValue = temp.get(k).length();
-                    System.out.println(intValue);
-                }
+        for (String s : temp) {
+            intValue = s.length();
+
+            if (intValue > highestValue) {
+                highestValue = intValue;
             }
         }
-       return intValue;
+       return highestValue;
     }
 }
