@@ -7,7 +7,7 @@ public class ItemTest {
 
     public static void main(String[] args) {
 
-        Item items = new Item();
+
         Cart cart = new Cart();
 
         Scanner scanDouble = new Scanner(System.in);
@@ -22,29 +22,33 @@ public class ItemTest {
 
 
         do{
+
+            Item item = new Item();
             System.out.println("Enter product name");
             String productName = scanString.nextLine();
-            items.setName(productName);
+            item.setName(productName);
 
 
             System.out.println("Enter product price");
             double productPrice = scanDouble.nextDouble();
-            items.setPrice(productPrice);
+            item.setPrice(productPrice);
 
             System.out.println("Enter Quantity of product");
-            int unitSold = scanInteger.nextInt();
-            items.setQuantity(unitSold);
+            int unit = scanInteger.nextInt();
+            item.setQuantity(unit);
 
-            cart.addItems(items);
+            cart.addItems(item);
 
             System.out.println("Press Yes to continue or No to Exit");
              decision = scan.nextLine();
 
         }while (decision.equalsIgnoreCase("yes"));
 
-
+        System.out.println("==============================================");
         System.out.println(cart.getItemList());
 
-        System.out.println("Total Purchase: " + cart.calculateTotalPrice());
+        System.out.println("Total Cost : " + cart.calculateTotalPrice());
+
+        System.out.println("======================================================");
     }
 }
