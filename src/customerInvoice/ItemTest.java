@@ -24,6 +24,7 @@ public class ItemTest {
         do{
 
             Item item = new Item();
+
             System.out.println("Enter product name");
             String productName = scanString.nextLine();
             item.setName(productName);
@@ -44,11 +45,11 @@ public class ItemTest {
 
         }while (decision.equalsIgnoreCase("yes"));
 
-        System.out.println("==============================================");
+
         System.out.println(cart.getItemList());
 
         System.out.println("Total Cost : " + cart.calculateTotalPrice());
 
-        System.out.println("======================================================");
+
     }
 }
