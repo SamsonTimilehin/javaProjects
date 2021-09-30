@@ -48,6 +48,6 @@ public class Item {
     @Override
     public String toString() {
         return String.format("Product Name: %s%n Price: %f%n Quantity: %d%n Cost: %f%n"
-                ,name,price,quantity,totalCost());
+                ,getName(),getPrice(),getQuantity(),totalCost());
     }
 }

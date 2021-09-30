@@ -10,38 +10,38 @@ public class ItemTest {
 
         Cart cart = new Cart();
 
-        Scanner scanDouble = new Scanner(System.in);
+        Scanner scanString1 = new Scanner(System.in);
 
-        Scanner scanString = new Scanner(System.in);
-
-        Scanner scanInteger = new Scanner(System.in);
+        Scanner scanString2 = new Scanner(System.in);
 
         Scanner scan = new Scanner(System.in);
 
         String decision;
-
+        String productName;
+        double productPrice;
+        int unit;
 
         do{
 
             Item item = new Item();
 
             System.out.println("Enter product name");
-            String productName = scanString.nextLine();
+            productName = scanString2.nextLine();
             item.setName(productName);
 
 
             System.out.println("Enter product price");
-            double productPrice = scanDouble.nextDouble();
+            productPrice = scan.nextDouble();
             item.setPrice(productPrice);
 
             System.out.println("Enter Quantity of product");
-            int unit = scanInteger.nextInt();
+            unit = scan.nextInt();
             item.setQuantity(unit);
 
             cart.addItems(item);
 
             System.out.println("Press Yes to continue or No to Exit");
-             decision = scan.nextLine();
+             decision = scanString1.nextLine();
 
         }while (decision.equalsIgnoreCase("yes"));
 
