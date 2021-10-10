@@ -4,7 +4,7 @@ public class PrimeNumber {
 
     public static void main(String[] args) {
 
-        findPrime(41);
+        findPrime(59);
     }
 
     public static void findPrime(int number){
