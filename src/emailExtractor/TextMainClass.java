@@ -1,4 +1,4 @@
-package regex;
+package emailExtractor;
 
 import java.util.Scanner;
 
