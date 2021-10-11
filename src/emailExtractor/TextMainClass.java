@@ -15,6 +15,6 @@ public class TextMainClass {
         String text = scanner.nextLine();
 
         textObject.setWriteUp(text);
-        textObject.extractEmails();
+        System.out.println(textObject.getExtractedEmails());
     }
 }
