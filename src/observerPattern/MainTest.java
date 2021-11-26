@@ -2,6 +2,7 @@ package observerPattern;
 
 public class MainTest {
     public static void main(String[] args) {
+
         Subject apple = new Company("Apple Inc", 1200);
         Subject facebook = new Company("Facebook", 150);
         Observer customer1 = new Customer("Billy", 500);

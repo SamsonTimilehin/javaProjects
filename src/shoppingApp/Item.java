@@ -1,4 +1,4 @@
-package customerInvoice;
+package shoppingApp;
 
 public class Item {
     private String name;

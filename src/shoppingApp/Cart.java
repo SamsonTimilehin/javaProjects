@@ -1,4 +1,4 @@
-package customerInvoice;
+package shoppingApp;
 
 import java.util.ArrayList;
 import java.util.List;
