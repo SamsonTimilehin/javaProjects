@@ -5,24 +5,34 @@ import java.util.List;
 
 public class Cart {
 
-    private List<Item> itemList = new ArrayList<>();
+    private List<Item> items = new ArrayList<>();
 
     public List<Item> getItemList() {
-        return itemList;
+        return items;
     }
 
     public void setItemList(List<Item> itemList) {
-        this.itemList = itemList;
+        this.items = itemList;
+    }
+
+    public void changeItemInCart(String itemInCartName, Item itemRef){
+      Item itemDB = items.stream().filter(name -> name.getName().equals(itemInCartName)).findFirst().get();
+
+      itemDB.setName(itemRef.getName());
+      itemDB.setPrice(itemRef.getPrice());
+      itemDB.setQuantity(itemRef.getQuantity());
+
+
     }
 
     public void addItems(Item product){
-        itemList.add(product);
+        items.add(product);
     }
     public double calculateTotalPrice(){
 
         double sum = 0;
 
-        for(Item price : itemList){
+        for(Item price : items){
             sum += price.totalCost();
         }
         return sum;
