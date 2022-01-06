@@ -1,4 +1,4 @@
-package singleResponsibility;
+package SolidSingleResponsibility;
 
 import java.util.ArrayList;
 import java.util.List;

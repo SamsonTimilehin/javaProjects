@@ -1,4 +1,4 @@
-package singleResponsibility;
+package SolidSingleResponsibility;
 
 public class Account {
 
