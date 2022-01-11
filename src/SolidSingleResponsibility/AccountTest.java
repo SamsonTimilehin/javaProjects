@@ -8,13 +8,14 @@ public class AccountTest {
         Account account2 = new Account("John","21347891","current",0.0);
 
         AccountRepository accountRepository = new AccountRepository();
-        NotificationService notificationService = new NotificationService();
-
-        //AccountService accountService = new AccountService();
         accountRepository.saveAccount(account1);
         accountRepository.saveAccount(account2);
-        //accountService.openAccount(account1);
+        NotificationService notificationService = new NotificationService();
         notificationService.sendNotification();
+        //AccountService accountService = new AccountService();
+
+        //accountService.openAccount(account1);
+
 
 
 
