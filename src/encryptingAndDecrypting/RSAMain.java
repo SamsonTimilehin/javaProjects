@@ -7,7 +7,7 @@ public class RSAMain {
         RSA rsa = new RSA();
         try{
 
-            String encryptedMessage = rsa.encrypt("Hello work");
+            String encryptedMessage = rsa.encrypt("Client Key and Random String");
             System.out.println("Encrypt \n"+encryptedMessage);
             String decryptedMessage = rsa.decrypt(encryptedMessage);
             System.out.println("Decrypt \n"+decryptedMessage);
